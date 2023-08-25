@@ -4,5 +4,4 @@ export function core(): string {
 export const logMessage = (message: string) => {
   console.log(message);
   console.log(message);
-  console.log(message);
 }
