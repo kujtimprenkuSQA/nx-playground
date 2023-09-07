@@ -34,7 +34,7 @@ module.exports.update = async function ({
     }
 
 
-    const [ match ] = body.match(/(- \[[x]\] (BREAKING CHANGE).+)/g) || [];
+    const [ match ] = body.match(/(- \[[x]\] (BREAKING CHANGE).+)/g) || [];
 
     console.log({match});
 
