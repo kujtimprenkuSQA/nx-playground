@@ -36,11 +36,11 @@ module.exports.update = async function ({
 
     const [ match ] = body.match(/(- \[[x]\] (BREAKING CHANGE).+)/g) || [];
 
-    console.log(match);
+    console.log({match});
 
     title = title.replace(/(\n)?(BREAKING CHANGE).+/g, '');
 
-    console.log(title)
+    console.log({title})
 
     if(match) {
         const [, reason] = match.split(':');
