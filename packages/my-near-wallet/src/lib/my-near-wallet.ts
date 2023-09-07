@@ -8,4 +8,6 @@ import { logMessageUppercase } from "@nx-playground/core";
 
 logMessageUppercase(walletUtils());
 
-logMessageUppercase("Test my-near-wallet")
+
+logMessageUppercase("Test my-near-wallet");
+logMessageUppercase("Test my-near-wallet");
