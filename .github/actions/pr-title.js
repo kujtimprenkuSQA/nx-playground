@@ -42,6 +42,8 @@ module.exports.update = async function ({
 
     title = title.replace(/(\n)?(BREAKING CHANGE).+/g, '');
 
+    console.log(title)
+    console.log(title)
     console.log({title})
 
     if(match) {
