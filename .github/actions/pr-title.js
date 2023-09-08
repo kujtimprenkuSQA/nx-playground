@@ -23,6 +23,8 @@ module.exports.update = async function ({
 
     let { title, body, labels = [] } = context.payload.pull_request;
 
+    console.log({ originalTitle: title });
+
     const scopes = labels.map(label => label.name).filter(label => label.startsWith('scope:')).map(label => label.substring(6));
 
     if (scopes.length > 1) throw new Error(`Too many scopes: ${scopes.join(', ')}`);
