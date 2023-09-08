@@ -42,12 +42,7 @@ module.exports.update = async function ({
 
     title = title.replace(/(\n)?(BREAKING CHANGE).+/g, '');
 
-<<<<<<< HEAD
-    console.log({title})
-=======
     console.log(title)
-    console.log(title)
->>>>>>> dacc496 (add new log.)
 
     if(match) {
         const [, reason] = match.split(':');
