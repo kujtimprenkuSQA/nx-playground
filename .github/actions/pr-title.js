@@ -33,6 +33,7 @@ module.exports.update = async function ({
 
     for (const { 2: type } of body.matchAll(REGEX_CHANGE_TYPE)) {
         title = `${CONVENTIONAL_COMMIT_CHANGES[type]}${scope ? '(' + scope + ')' : ''}: ${title.replace(/^.*:(\s)?/g, '').trim()}`;
+        console.log({conventionalTChange: title})
     }
 
 
