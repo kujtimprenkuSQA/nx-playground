@@ -42,9 +42,9 @@ module.exports.update = async function ({
 
     console.log({title})
 
-    if(match){
-        const [t, reason] = match.split(':');
-        title = `${t}
+    if(match) {
+        const [, reason] = match.split(':');
+        title = `${title}
     BREAKING CHANGE: ${reason}`;
     }
 
