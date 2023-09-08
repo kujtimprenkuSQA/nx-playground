@@ -31,13 +31,14 @@ module.exports.update = async function ({
 
     const [ scope ] = scopes;
 
+    const [ match ] = body.match(/(- \[[x]\] (BREAKING CHANGE).+)/g) || [];
+
     for (const { 2: type } of body.matchAll(REGEX_CHANGE_TYPE)) {
-        title = `${CONVENTIONAL_COMMIT_CHANGES[type]}${scope ? '(' + scope + ')' : ''}: ${title.replace(/^.*:(\s)?/g, '').trim()}`;
+        title = `${CONVENTIONAL_COMMIT_CHANGES[type]}${scope ? '(' + scope + ')' : ''}: ${!match ? title.replace(/^.*:(\s)?/g, '').trim() : ""}`;
         console.log({conventionalTChange: title})
     }
 
 
-    const [ match ] = body.match(/(- \[[x]\] (BREAKING CHANGE).+)/g) || [];
 
     console.log({match});
 
