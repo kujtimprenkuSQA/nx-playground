@@ -4,4 +4,4 @@ export const walletUtils = () => {
     return "wallet-utils";
 }
 
-logMessageUppercase("Test wallet utils")
+logMessageUppercase("Test wallet utils");
