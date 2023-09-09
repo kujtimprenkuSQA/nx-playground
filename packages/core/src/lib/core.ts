@@ -3,7 +3,7 @@ export const core = () => {
 }
 
 export const logMessageUppercase = (message: string) => {
-    console.log("uppercase" + message.toUpperCase());
+    console.log(`Uppercase ${message.toUpperCase()}`);
 }
 
 export const logMessageLowercase = (message: string) => {
